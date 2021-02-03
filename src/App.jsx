@@ -1,12 +1,13 @@
+//Routes
+import Routes from "./routes";
 //Style
-import GamePage from "./pages/gamepage";
 import GlobalStyles from "./styles/GlobalStyles";
 
 const App = () => {
   return (
     <>
       <GlobalStyles />
-      <GamePage />
+      <Routes />
     </>
   );
 };
