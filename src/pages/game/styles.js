@@ -7,7 +7,7 @@ export const Grid = styled.div`
   height: 100vh;
 
   display: grid;
-  grid-template-columns: 300px 1fr 350px;
+  grid-template-columns: 250px 1fr 250px;
   grid-template-rows: 1fr;
 
   grid-template-areas: "LS CT RS";
@@ -19,7 +19,8 @@ export const LeftSide = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
+  margin-top: 50px;
 
   > h1 {
     font-size: 24px;
@@ -63,9 +64,16 @@ export const Content = styled.div`
   grid-area: CT;
 
   background: url(${backgroundGame}) no-repeat center;
-  background-size: 70%;
+  background-size: 100% 100%;
 
   margin: 50px 0;
+
+  > img {
+    align-items: center;
+    position: relative;
+    top: 60vh;
+    left: 50vw; //max-left 50 md-35 min-20 --Props Img e make Switch CaseHere
+  }
 `;
 
 export const RightSide = styled.div`

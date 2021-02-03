@@ -28,7 +28,6 @@ const GamePage = () => {
         <button onClick={handleStartGameButton}>Start!</button>
       </LeftSide>
       <Content>
-        <h1>GAME</h1>
         <img src={carIcon} alt="Car" />
       </Content>
       <RightSide>

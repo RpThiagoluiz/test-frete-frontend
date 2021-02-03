@@ -2,7 +2,7 @@
 
 [x] - clean
 [] - SetCar in Road
-[] - Move Car
+[] - Move Car -> Switch case for Arrow or letters
 [] - Onclick Start button - Count 1,2,3
 [] - Set Score - time base
 [] - Max Score Win
