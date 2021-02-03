@@ -1,11 +1,12 @@
 //Style
+import GamePage from "./pages/gamepage";
 import GlobalStyles from "./styles/GlobalStyles";
 
 const App = () => {
   return (
     <>
       <GlobalStyles />
-      <h1>Hello, hi, Good morning!</h1>;
+      <GamePage />
     </>
   );
 };
