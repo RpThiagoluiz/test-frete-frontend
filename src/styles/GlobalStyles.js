@@ -14,7 +14,7 @@ html,body,#root{
 *,button,input{
   border:0;
   outline:0;
-  font-family: "Roboto", sans-serif
+  font-family: "Press Start 2P", cursive;
 }
 button{
   cursor:pointer;

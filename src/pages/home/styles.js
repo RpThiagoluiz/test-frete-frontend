@@ -61,7 +61,6 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: "Press Start 2P", cursive;
   text-transform: uppercase;
 
   font-size: 56px;
