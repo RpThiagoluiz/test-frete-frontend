@@ -1,3 +1,3 @@
 ### INIT
 
-[] - clean
+[x] - clean
