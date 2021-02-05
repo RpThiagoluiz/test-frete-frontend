@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+
 //Styles
 import {
   Container,
@@ -20,10 +21,10 @@ const Player = () => {
 
   const handleSubmitDataPlayer = (e) => {
     e.preventDefault();
-    console.log(nick, avatar);
-    const dataPlayer = { nick, avatar };
-    //alert(`Lets Play! ${nick}`);
-    //history.push("/game");
+    console.log({ player: { nick, avatar } });
+    const dataPlayer = { player: { nick, avatar } };
+    alert(`Lets Play! ${nick}`);
+    history.push("/game");
   };
 
   return (
