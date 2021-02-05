@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <Container>
       <Title>Just Regular Car Game 8-Bits</Title>
-      <Link to="/game">
+      <Link to="/player">
         <img src={playIcon} alt="Game Page" />
       </Link>
     </Container>

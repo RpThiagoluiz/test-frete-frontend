@@ -5,12 +5,19 @@ import backgroundGame from "../../assets/images/background-pista.gif";
 
 export const Grid = styled.div`
   height: 100vh;
-
   display: grid;
   grid-template-columns: 250px 1fr 250px;
   grid-template-rows: 1fr;
 
   grid-template-areas: "LS CT RS";
+
+  background: rgb(255, 255, 255, 1);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 13%,
+    rgba(146, 205, 53, 0.3) 46%,
+    rgba(38, 56, 68, 0.3) 75%
+  );
 `;
 
 export const LeftSide = styled.div`
@@ -21,59 +28,28 @@ export const LeftSide = styled.div`
   align-items: center;
 
   margin-top: 50px;
-
-  > h1 {
-    font-size: 24px;
-  }
-
-  > input {
-    height: 50px;
-    width: 90%;
-
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-
-    margin: 50px 0;
-    padding: 25px;
-
-    border: 2px solid black;
-    border-radius: 2px;
-  }
-
-  > button {
-    width: 156px;
-    height: 56px;
-
-    font-size: 18px;
-
-    background-color: #41c429;
-    color: #fff;
-
-    border-radius: 4px;
-
-    opacity: 0.5;
-    transition: opacity 0.3s ease-in-out;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
 `;
 
 export const Content = styled.div`
   grid-area: CT;
 
+  display: flex;
+  flex-direction: column;
+
   background: url(${backgroundGame}) no-repeat center;
-  background-size: 100% 100%;
+  background-size: 500px;
 
   margin: 50px 0;
+`;
 
-  > img {
-    align-items: center;
-    position: relative;
-    top: 60vh;
-    left: 50vw; //max-left 50 md-35 min-20 --Props Img e make Switch CaseHere
-  }
+export const ImageAvatar = styled.img`
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  left: ${(props) =>
+    props.moveSides}; //left-43 md-48 right-54 --Props Img e make Switch CaseHere 1820pScreen
+
+  transition: all 0.5s ease-in-out;
 `;
 
 export const RightSide = styled.div`
