@@ -16,17 +16,18 @@ const Player = () => {
   const history = useHistory();
 
   const [nick, setNick] = useState("");
-  const [avatar, setAvatar] = useState();
+  const [avatar, setAvatar] = useState("");
   const [playerData, setPlayerData] = useState({
-    nick,
-    avatar,
+    nick: nick === "" ? "Anonimous" : nick,
+    avatar: avatar === "" ? vehiclesPlayer[1].image : avatar,
   });
 
   const handleSubmitDataPlayer = (e) => {
     e.preventDefault();
+    console.log(playerData);
     const dataPlayer = playerData;
-    alert(`Lets Play! ${nick === "" ? "Anonimous" : nick}`);
-    history.push("/game");
+    //alert(`Lets Play! ${nick}`);
+    //history.push("/game");
   };
 
   return (
