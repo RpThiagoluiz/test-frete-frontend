@@ -35,14 +35,17 @@ export const SelectVehicles = styled.div`
   align-items: left;
   justify-content: space-around;
 
-  > img {
-    height: 164px;
-    margin-top: 50px;
-    padding: 5px;
-    cursor: pointer;
+  > button {
+    background-color: transparent;
+    > img {
+      height: 164px;
+      margin-top: 50px;
+      padding: 5px;
+      cursor: pointer;
 
-    &:hover {
-      border: 5px solid rgba(146, 205, 53, 0.3);
+      &:hover {
+        border: 5px solid rgba(146, 205, 53, 0.3);
+      }
     }
   }
 `;

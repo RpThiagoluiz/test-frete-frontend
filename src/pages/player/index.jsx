@@ -16,16 +16,12 @@ const Player = () => {
   const history = useHistory();
 
   const [nick, setNick] = useState("");
-  const [avatar, setAvatar] = useState("");
-  const [playerData, setPlayerData] = useState({
-    nick: nick === "" ? "Anonimous" : nick,
-    avatar: avatar === "" ? vehiclesPlayer[1].image : avatar,
-  });
+  const [avatar, setAvatar] = useState(vehiclesPlayer[1].image);
 
   const handleSubmitDataPlayer = (e) => {
     e.preventDefault();
-    console.log(playerData);
-    const dataPlayer = playerData;
+    console.log(nick, avatar);
+    const dataPlayer = { nick, avatar };
     //alert(`Lets Play! ${nick}`);
     //history.push("/game");
   };
@@ -42,13 +38,14 @@ const Player = () => {
         />
         <FormSubtitle>Select Your Vehicle</FormSubtitle>
         <SelectVehicles>
-          {vehiclesPlayer.map((vehicle, e) => (
-            <img
+          {vehiclesPlayer.map((vehicle, index) => (
+            <button
               key={vehicle.id}
-              src={vehicle.image}
-              alt={vehicle.name}
-              onClick={console.log(vehicle.id)}
-            />
+              type="button"
+              onClick={() => setAvatar(vehicle.image)}
+            >
+              <img src={vehicle.image} alt={vehicle.name} />
+            </button>
           ))}
         </SelectVehicles>
 
