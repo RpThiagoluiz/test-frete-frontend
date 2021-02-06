@@ -1,37 +1,38 @@
+import { usePlayerData } from "../../hooks/player";
 //Styles
 import { useEffect, useState } from "react";
 import { Grid, LeftSide, Content, ImageAvatar, RightSide } from "./styles";
 import carIcon from "../../assets/avatar/car.png";
+import { Switch } from "react-router-dom";
 
 const GamePage = () => {
-  const [playerName, setPlayerName] = useState("Player");
   const [score, setScore] = useState(0);
-  const [moveVehicle, setMoveVehicle] = useState("48vw");
+  const [moveVehicle, setMoveVehicle] = useState("48%");
 
   useEffect(() => {
-    //keypress da janela...E agora.
-  }, [playerName, score, moveVehicle]);
+    const handleKeyDown = (e) => {
+      switch (e.keyCode) {
+        case 65:
+        case 37:
+          setMoveVehicle("40vw");
+          break;
+        case 83:
+        case 40:
+          setMoveVehicle("48%");
+          break;
+        case 68:
+        case 39:
+          setMoveVehicle("56vw");
+          break;
+
+        default:
+          break;
+      }
+      console.log("A key was pressed", e.keyCode);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+  }, [score, moveVehicle]);
   //Refresh button, setScore=0
-
-  const switchLineVehicle = (e) => {
-    switch (e.onKeyDown) {
-      case "A" | "ArrowLeft":
-        setMoveVehicle("43vw");
-        console.log(moveVehicle);
-        break;
-
-      case "S" | "ArrowDown":
-        setMoveVehicle("48vw");
-        break;
-
-      case "D" | "ArrowRight":
-        setMoveVehicle("54vw");
-        break;
-
-      default:
-        return "48vw";
-    }
-  };
 
   return (
     <Grid>
@@ -41,11 +42,10 @@ const GamePage = () => {
           src={carIcon}
           alt="Car"
           moveSides={moveVehicle} //styles position image
-          onKeyDown={(e) => switchLineVehicle(e)}
         />
       </Content>
       <RightSide>
-        <h3>{playerName}</h3>
+        <h3>As left the game</h3>
         <small>{score}</small>
       </RightSide>
     </Grid>

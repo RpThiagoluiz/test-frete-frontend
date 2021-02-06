@@ -1,43 +1,33 @@
-import { createContext, useState, useContext } from "react";
+import { useContext, createContext, useState } from "react";
 
-//Default Vehicle
+//DefaultVehicle
 import carVehicle from "../assets/avatar/car.png";
 
-const PlayerContext = createContext();
+//Context
+const PlayerContext = createContext({ player: {} });
 
-const PlayerProvider = ({ Children }) => {
+//Provider
+const PlayerProvider = ({ children }) => {
   const [playerData, setPlayerData] = useState({
     player: { nick: "Anonimous", avatar: carVehicle },
   });
 
-  const singPlayerData = (player) => {
-    const { nick, avatar } = player;
-
-    const newPlayer = {
-      nick,
-      avatar,
-    };
-    return setPlayerData(newPlayer);
-  };
-
-  const outPlayerData = () => {
-    const out = {
-      player: { nick: "Anonimous", avatar: carVehicle },
-    };
-    return setPlayerData(out);
+  const regPlayer = (nick, avatar) => {
+    if (!nick && !avatar) {
+      return setPlayerData({ player: { nick, avatar } });
+    }
   };
 
   return (
-    <PlayerContext.Provider value={(playerData, singPlayerData, outPlayerData)}>
-      {Children}
+    <PlayerContext.Provider value={(playerData, regPlayer)}>
+      {children}
     </PlayerContext.Provider>
   );
 };
 
-const usePlayerTheme = () => {
+function usePlayerData() {
   const context = useContext(PlayerContext);
-
   return context;
-};
+}
 
-export { usePlayerTheme, PlayerProvider };
+export { PlayerProvider, usePlayerData };
