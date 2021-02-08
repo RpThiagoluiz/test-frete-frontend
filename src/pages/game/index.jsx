@@ -1,13 +1,15 @@
-import { usePlayerData } from "../../hooks/player";
-//Styles
 import { useEffect, useState } from "react";
+//Custom Hook
+import { usePlayer } from "../../hooks/playerProvider";
+//Styles
 import { Grid, LeftSide, Content, ImageAvatar, RightSide } from "./styles";
-import carIcon from "../../assets/avatar/car.png";
-import { Switch } from "react-router-dom";
 
 const GamePage = () => {
   const [score, setScore] = useState(0);
   const [moveVehicle, setMoveVehicle] = useState("48%");
+
+  const { player } = usePlayer();
+  console.log(player);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -39,13 +41,13 @@ const GamePage = () => {
       <LeftSide></LeftSide>
       <Content>
         <ImageAvatar
-          src={carIcon}
+          src={player.player.vehicle}
           alt="Car"
           moveSides={moveVehicle} //styles position image
         />
       </Content>
       <RightSide>
-        <h3>As left the game</h3>
+        <h3>{player.player.nick}</h3>
         <small>{score}</small>
       </RightSide>
     </Grid>

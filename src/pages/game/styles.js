@@ -43,6 +43,11 @@ export const Content = styled.div`
 `;
 
 export const ImageAvatar = styled.img`
+  //Custom Vehicles
+  width: 78px;
+  height: 98px;
+  margin-bottom: 5px;
+
   align-items: center;
   position: absolute;
   bottom: 50px;

@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-//Hook
-import { usePlayerData } from "../../hooks/player";
 //Styles
 import {
   Container,
@@ -17,7 +15,6 @@ import { vehiclesPlayer } from "../../utils/vehicles";
 
 const Player = () => {
   const history = useHistory();
-  const singPlayerData = usePlayerData();
 
   const [nick, setNick] = useState("");
   const [avatar, setAvatar] = useState("");
