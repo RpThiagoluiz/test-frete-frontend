@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import BackButton from "../../components/BackButton";
 //Custom Hook
 import { usePlayer } from "../../hooks/playerProvider";
+//Components
+
 //Styles
 import { Grid, LeftSide, Content, ImageAvatar, RightSide } from "./styles";
 
@@ -16,7 +19,7 @@ const GamePage = () => {
       switch (e.keyCode) {
         case 65:
         case 37:
-          setMoveVehicle("40vw");
+          setMoveVehicle("36vw");
           break;
         case 83:
         case 40:
@@ -38,7 +41,9 @@ const GamePage = () => {
 
   return (
     <Grid>
-      <LeftSide></LeftSide>
+      <LeftSide>
+        <BackButton />
+      </LeftSide>
       <Content>
         <ImageAvatar
           src={player.vehicle}

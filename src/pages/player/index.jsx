@@ -18,14 +18,17 @@ import { vehiclesPlayer } from "../../utils/vehicles";
 const Player = () => {
   const history = useHistory();
   const [nick, setNick] = useState("");
-  const [avatar, setAvatar] = useState("");
+  const [vehiclePlayer, setVehiclePlayer] = useState("");
 
-  const { player, setPlayer } = usePlayer();
-  console.log(player);
+  const { setPlayer } = usePlayer();
 
   const handleSubmitDataPlayer = (e) => {
     e.preventDefault();
-    setPlayer({ nick: nick, vehicle: avatar });
+
+    //For hour
+    if (nick !== "" && vehiclePlayer !== "") {
+      setPlayer({ nick: nick, vehicle: vehiclePlayer });
+    }
 
     alert(`Lets Play! ${nick}`);
     history.push("/game");
@@ -47,7 +50,7 @@ const Player = () => {
             <button
               key={vehicle.id}
               type="button"
-              onClick={() => setAvatar(vehicle.image)}
+              onClick={() => setVehiclePlayer(vehicle.image)}
             >
               <img src={vehicle.image} alt={vehicle.name} />
             </button>
