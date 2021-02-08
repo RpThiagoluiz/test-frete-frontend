@@ -24,11 +24,11 @@ const GamePage = () => {
         case 39:
           setMoveVehicle("56vw");
           break;
-
+        case 37:
+        //Esc for pause Game
         default:
           break;
       }
-      console.log("A key was pressed", e.keyCode);
     };
     window.addEventListener("keydown", handleKeyDown);
   }, [score, moveVehicle]);

@@ -1,14 +1,14 @@
-### INIT
+### Car Game-8Bit
 
-[x] - clean
-[] - SetCar in Road
-[] - Move Car -> Switch case for Arrow or letters
-[] - Onclick Start button - Count 1,2,3
-[] - Set Score - time base
-[] - Max Score Win
+`yarn install` <p>Install all dependencies</p>
+`yarn start` <p>Init Aplication</p>
 
-### Plus
+  <p>Home page. Just simple landing page, click in play button, set your nick and your vehicle. Start a game</p>
+  <p>For change car direction, use Arrows or "A"-> Left, "S" -> Mid , "D" -> Right</p>
 
-[] - Avatar change
-[] - Game bckGround change
+### Update
+
+[] - Count When click in start game.
+[] - Score Up
+[] - Background Change
 [] - Max Score Win | play free
