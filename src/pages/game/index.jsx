@@ -3,7 +3,7 @@ import BackButton from "../../components/BackButton";
 //Custom Hook
 import { usePlayer } from "../../hooks/playerProvider";
 //Components
-
+import StartGameCount from "../../components/StartGameCount";
 //Styles
 import { Grid, LeftSide, Content, ImageAvatar, RightSide } from "./styles";
 
@@ -41,6 +41,7 @@ const GamePage = () => {
 
   return (
     <Grid>
+      <StartGameCount />
       <LeftSide>
         <BackButton />
       </LeftSide>

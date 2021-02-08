@@ -18,3 +18,7 @@
 [] - Score Up
 [] - Background Change
 [] - Max Score Win | play free
+
+### Bugs Need Fix
+
+[] - Mask on Input and Selected vehicle.

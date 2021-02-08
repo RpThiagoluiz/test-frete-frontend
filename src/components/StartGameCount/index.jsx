@@ -1,10 +1,12 @@
-import { Container } from "./style";
+import { ModalContainer, Modal, ModalContent } from "./style";
 
 const StartGameCount = () => {
   return (
-    <Container>
-      <h1>HELLO</h1>
-    </Container>
+    <ModalContainer>
+      <Modal>
+        <ModalContent>3</ModalContent>
+      </Modal>
+    </ModalContainer>
   );
 };
 export default StartGameCount;
