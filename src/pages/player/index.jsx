@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
+//Custom Hook
+import { usePlayer } from "../../hooks/playerProvider";
 //Styles
 import {
   Container,
@@ -10,19 +12,20 @@ import {
   SelectVehicles,
   ButtonSubmit,
 } from "./styles";
-//vehicles
+//Vehicles
 import { vehiclesPlayer } from "../../utils/vehicles";
 
 const Player = () => {
   const history = useHistory();
-
   const [nick, setNick] = useState("");
   const [avatar, setAvatar] = useState("");
 
+  const { player, setPlayer } = usePlayer();
+  console.log(player);
+
   const handleSubmitDataPlayer = (e) => {
     e.preventDefault();
-    console.log({ player: { nick, avatar } });
-    const dataPlayer = { player: { nick, avatar } };
+    setPlayer({ nick: nick, vehicle: avatar });
 
     alert(`Lets Play! ${nick}`);
     history.push("/game");

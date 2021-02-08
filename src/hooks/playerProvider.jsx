@@ -7,7 +7,8 @@ import car from "../assets/avatar/car.png";
 
 const PlayerProvider = ({ children }) => {
   const [player, setPlayer] = useState({
-    player: { nick: "Anonimous", vehicle: car },
+    nick: "Anonimous",
+    vehicle: car,
   });
 
   return (

@@ -41,13 +41,13 @@ const GamePage = () => {
       <LeftSide></LeftSide>
       <Content>
         <ImageAvatar
-          src={player.player.vehicle}
+          src={player.vehicle}
           alt="Car"
           moveSides={moveVehicle} //styles position image
         />
       </Content>
       <RightSide>
-        <h3>{player.player.nick}</h3>
+        <h3>{player.nick}</h3>
         <small>{score}</small>
       </RightSide>
     </Grid>
