@@ -8,11 +8,10 @@ import StartGameCount from "../../components/StartGameCount";
 import { Grid, LeftSide, Content, ImageAvatar, RightSide } from "./styles";
 
 const GamePage = () => {
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(0); //AutoCount
   const [moveVehicle, setMoveVehicle] = useState("48%");
 
   const { player } = usePlayer();
-  console.log(player);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -41,7 +40,7 @@ const GamePage = () => {
 
   return (
     <Grid>
-      <StartGameCount />
+      {/*<StartGameCount />*/}
       <LeftSide>
         <BackButton />
       </LeftSide>

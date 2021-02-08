@@ -8,9 +8,10 @@
 
 ### Prints
 
-![](./gitkeep/{}.png)
-![](./gitkeep/{}.png)
-![](./gitkeep/{}.png)
+![](./gitkeep/home.PNG)
+![](./gitkeep/PlayerChoice.PNG)
+![](./gitkeep/DefaultMode.PNG)
+![](./gitkeep/CustomMode.PNG)
 
 ### Update
 
