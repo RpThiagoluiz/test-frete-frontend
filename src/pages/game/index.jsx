@@ -16,7 +16,7 @@ const GamePage = () => {
       switch (e.keyCode) {
         case 65:
         case 37:
-          setMoveVehicle("36vw");
+          setMoveVehicle("42vw");
           break;
         case 83:
         case 40:
@@ -24,7 +24,7 @@ const GamePage = () => {
           break;
         case 68:
         case 39:
-          setMoveVehicle("56vw");
+          setMoveVehicle("54vw");
           break;
         default:
           break;
